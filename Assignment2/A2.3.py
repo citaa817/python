@@ -1,6 +1,17 @@
-seconds = int(input("ثانیه را وارد "))
-hours = seconds // 3600
-seconds = seconds % 3600
-minutes = seconds // 60
-seconds = seconds % 60
-print(f"{hours:02}:{minutes:02}:{seconds:02}")
+seconds = int(input("please enter seconds:"))
+
+hour = 0
+minute = 0
+second = 0
+
+while seconds >= 3600:
+    hour += 1
+    seconds -= 3600
+
+while seconds >= 60:
+    minute += 1
+    seconds -= 60
+
+second = seconds
+
+print(f"{hour} hour, {minute} minute {second} second")
